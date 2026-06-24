@@ -10,22 +10,23 @@
 
 <body>
     <main>
-        <h1>Resultado final</h1>
         <?php
         $numero = $_GET["numero"];
-        $antecessor = $_GET["numero"] - 1;
-        $sucessor = $_GET["numero"] + 1;
+        $antecessor = $numero - 1;
+        $sucessor = $numero + 1;
         ?>
-        <?php echo "O número digitado foi: "; ?> <strong><?php echo "$numero <br>"; ?></strong>
-        <?php echo "O seu antecessor é: $antecessor <br>"; ?>
-        <?php echo "O seu sucessor é: $sucessor <br>"; ?>
 
+        <form action="index.html" method="get">
+            <h1>Resultado final</h1>
 
-        <input type="submit" value="Voltar">
+            <p>O número digitado foi: <strong> <?= $numero ?></strong></p>
+            <p>O seu antecessor é: <?= $antecessor ?></p>
+            <p>O seu sucessor é: <?= $sucessor ?> </p>
 
-
-
+            <input type="submit" value="Voltar">
+        </form>
     </main>
+
 </body>
 
 </html>
