@@ -1,3 +1,9 @@
+<?php
+$numero = $_GET["numero"];
+$antecessor = $numero - 1;
+$sucessor = $numero + 1;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,21 +16,21 @@
 
 <body>
     <main>
-        <?php
-        $numero = $_GET["numero"];
-        $antecessor = $numero - 1;
-        $sucessor = $numero + 1;
-        ?>
+        <h1>Resultado final</h1>
 
-        <form action="index.html" method="get">
-            <h1>Resultado final</h1>
+        <p>
+            <?php 
+            echo "O número digitado foi: <strong>$numero</strong>";
+            echo "<br>O seu antecessor é: $antecessor";
+            echo "<br>O seu sucessor é: $sucessor";
+            ?>
+        </p>
 
-            <p>O número digitado foi: <strong> <?= $numero ?></strong></p>
-            <p>O seu antecessor é: <?= $antecessor ?></p>
-            <p>O seu sucessor é: <?= $sucessor ?> </p>
 
-            <input type="submit" value="Voltar">
-        </form>
+
+
+
+        <button onclick="window.location.href='index.html'">&#x2B05; Voltar</button>
     </main>
 
 </body>
