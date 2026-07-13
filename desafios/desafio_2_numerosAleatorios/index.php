@@ -2,6 +2,7 @@
 $valorMin = 0;
 $valorMax = 100;
 // random_int gera numeros aleatórios criptograficamente seguros
+//porém é mais lento que a função rand() e mt_rand()
 $numeroSorteado = random_int($valorMin, $valorMax);   
 
 ?>
